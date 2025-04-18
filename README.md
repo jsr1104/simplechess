@@ -1,4 +1,5 @@
 # Simple Chess App
+This was done through Vite + typescript as this codestack I have found to fit my goals for this first project. I mainly want to work on my UI skills as well as work on a came that I enjoy.
 ## What functional features I want:
 - follows chess rules (castling, en passant, checkmate)
 - after clicking on a piece, it shows possible moves
