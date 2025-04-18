@@ -12,13 +12,18 @@ export function Board() {
 
   for (let row = 0; row < 8; row++) {
     for (let col = 0; col < 8; col++) {
+      // logic for alternating colors and giving location IDs
       const squareColor = (row + col) % 2 === 0 ? 'light' : 'dark';
       const squareId = `${FILES[col]}${8 - row}`;
-      const piece = board[row][col];
-  
+      const piece = board[row][col]; // board returns piece type and color
+      
+      // Is the current square a legal move position, false if nothing selected
       const isMoveTarget = legalMoves.some(move => move.to === squareId);
+
+      // Is the current square the one thats selected
       const isSelected = selected === squareId;
-  
+      
+      // Styles each unique square depending on selected, or move target, or current piece with id
       squares.push(
         <div
           key={squareId}
